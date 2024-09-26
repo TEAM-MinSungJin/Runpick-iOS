@@ -11,5 +11,12 @@ import ProjectDescriptionHelpers
 let project = Project.makeModule(
     name: "ThridPartyLib",
     product: .staticFramework,
-    dependencies: []
+    dependencies: [
+        .SPM.RxSwift,
+        .SPM.RxCocoa,
+        .SPM.Moya,
+        .SPM.Kingfisher,
+        .SPM.SnapKit,
+        .SPM.Lottie
+    ]
 )
