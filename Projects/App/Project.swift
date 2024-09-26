@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let project = Project(
     name: "Walk",
@@ -26,7 +27,9 @@ let project = Project(
             ),
             sources: ["Sources/**"],
             resources: ["Resources/**"],
-            dependencies: []
+            dependencies: [
+                .DIContainer.BaseDIContainer
+            ]
         ),
         .target(
             name: "WalkTests",
