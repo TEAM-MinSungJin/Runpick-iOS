@@ -1,5 +1,7 @@
 import UIKit
 
+import BaseDIContainer
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
@@ -9,10 +11,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
 
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .orange
+        let navigationController = UINavigationController()
+        window?.rootViewController = navigationController
+
+        let appCoordinator: AppCoordinator = AppCoordinator(with: navigationController)
+        appCoordinator.start()
         
-        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
 }
