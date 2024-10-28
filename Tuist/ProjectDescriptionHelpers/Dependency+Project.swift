@@ -46,6 +46,11 @@ public extension TargetDependency.Feature {
         target: "BaseFeature",
         path: .relativeToRoot("Projects/Features/BaseFeature")
     )
+    
+    static let LoginFeature = TargetDependency.project(
+        target: "LoginFeature",
+        path: .relativeToRoot("Projects/Features/LoginFeature")
+    )
 }
 
 public extension TargetDependency.ThridPartyLib {
