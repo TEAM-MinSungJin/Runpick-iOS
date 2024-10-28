@@ -2,13 +2,13 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project(
-    name: "Walk",
+    name: "Runpick",
     targets: [
         .target(
-            name: "Walk",
+            name: "Runpick",
             destinations: .iOS,
             product: .app,
-            bundleId: "io.tuist.Walk",
+            bundleId: "io.tuist.Runpick",
             infoPlist: .extendingDefault(
                 with: [
                     "UILaunchStoryboardName": "LaunchScreen.storyboard",
@@ -32,14 +32,14 @@ let project = Project(
             ]
         ),
         .target(
-            name: "WalkTests",
+            name: "RunpickTests",
             destinations: .iOS,
             product: .unitTests,
-            bundleId: "io.tuist.WalkTests",
+            bundleId: "io.tuist.RunpickTests",
             infoPlist: .default,
             sources: ["Tests/**"],
             resources: [],
-            dependencies: [.target(name: "Walk")]
+            dependencies: [.target(name: "Runpick")]
         ),
     ]
 )
