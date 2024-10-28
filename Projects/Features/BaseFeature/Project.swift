@@ -15,5 +15,6 @@ let project = Project.makeModule(
         .Domain.BaseDomain,
         .ThridPartyLib.ThridPartyLib,
         .Shared.DesignSystem
-    ]
+    ],
+    resources: ["Resources/**"]
 )
